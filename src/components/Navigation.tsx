@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Home, User, Menu } from "lucide-react";
+import { BookOpen, Home, User, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export function Navigation() {
@@ -54,10 +54,10 @@ export function Navigation() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="hidden md:inline-flex">
+            <Button variant="outline" size="sm" className="hidden sm:inline-flex">
               Sign In
             </Button>
-            <Button size="sm" className="bg-gradient-primary shadow-button hover:shadow-card-hover transition-all duration-300">
+            <Button size="sm" className="hidden sm:inline-flex bg-gradient-primary shadow-button hover:shadow-card-hover transition-all duration-300">
               Get Started
             </Button>
             
@@ -65,21 +65,26 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden"
+              className="md:hidden p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
-              <Menu className="h-5 w-5" />
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t py-4">
+          <div className="md:hidden border-t py-4 animate-fade-in">
             <nav className="flex flex-col space-y-3">
               <Link
                 to="/"
-                className={`flex items-center space-x-2 text-sm font-medium px-2 py-1 rounded transition-colors ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
                   isActive("/") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -89,7 +94,7 @@ export function Navigation() {
               </Link>
               <Link
                 to="/courses"
-                className={`flex items-center space-x-2 text-sm font-medium px-2 py-1 rounded transition-colors ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
                   isActive("/courses") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -99,7 +104,7 @@ export function Navigation() {
               </Link>
               <Link
                 to="/dashboard"
-                className={`flex items-center space-x-2 text-sm font-medium px-2 py-1 rounded transition-colors ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
                   isActive("/dashboard") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
@@ -107,6 +112,16 @@ export function Navigation() {
                 <User className="h-4 w-4" />
                 <span>Dashboard</span>
               </Link>
+              
+              {/* Mobile-only buttons */}
+              <div className="pt-3 border-t space-y-2">
+                <Button variant="outline" size="sm" className="w-full justify-start">
+                  Sign In
+                </Button>
+                <Button size="sm" className="w-full bg-gradient-primary shadow-button">
+                  Get Started
+                </Button>
+              </div>
             </nav>
           </div>
         )}
