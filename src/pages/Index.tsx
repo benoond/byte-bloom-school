@@ -38,9 +38,12 @@ const Index = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-white text-foreground hover:bg-white/10 text-lg px-8 py-6"
+                asChild
               >
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                <a href="https://www.youtube.com/watch?v=WV46mRxdjiE" target="_blank" rel="noopener noreferrer">
+                  <Play className="mr-2 h-5 w-5" />
+                  Watch Demo
+                </a>
               </Button>
             </div>
           </div>
