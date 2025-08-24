@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# 💻 Computer Courses MVP
 
-## Project info
+## 📌 Project Title
+**Computer Courses MVP Platform**
 
 **URL**: https://lovable.dev/projects/ec47c396-3020-4c68-9fa2-4414b194fca8
 
-## How can I edit this code?
+## 📖 Project Description
+A lightweight and modern MVP for an e-learning platform that offers beginner-friendly computer courses.  
+The platform includes a landing page, responsive navigation, a demo video link, login system with dummy credentials, and a student dashboard showcasing available courses.
 
-There are several ways of editing your application.
+## ✨ Features
+- Responsive landing page with a **Watch Demo** button linked to YouTube  
+- Modern UI with **shadcn-ui** components + **Tailwind CSS**  
+- **Login Page** with pre-filled credentials  
+- **Dashboard** with dummy courses and progress tracking placeholders  
+- Responsive navigation bar with Sign In and Dashboard buttons  
+- Logout functionality returning to login page  
+- Simple front-end routing with React Router  
 
-**Use Lovable**
+## 🎓 Courses Offered
+1. Digital Literacy & Productivity  
+2. Programming Foundations (Python)  
+3. Web Development Essentials (HTML, CSS, JavaScript)  
+4. Data & Databases (SQL, Python Basics)  
+5. Networking & Cybersecurity Basics  
+6. Emerging Tech Awareness (AI, Blockchain, Cloud)  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ec47c396-3020-4c68-9fa2-4414b194fca8) and start prompting.
+## 🎥 Demo or Screenshots
+- Watch Demo: [Introduction to Computer YouTube Lecture](https://www.youtube.com)  
+- Screenshots: 
+![Homepage Screenshot](img/homepage.png) 
+![Homepage Screenshot](img/courses.png) 
+![Homepage Screenshot](img/login.png)  
+![Homepage Screenshot](img/dashboard.png)  
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚙️ Setup and Usage
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/benoond/byte-bloom-school.git
+   cd computer-courses-mvp
+   ```
 
-**Use your preferred IDE**
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. Start the development server:  
+   ```bash
+   npm run dev
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4. Open the app in your browser at:  
+   ```
+   http://localhost:5173
+   ```
 
-Follow these steps:
+### Dummy Login Credentials
+- Email: `student@example.com`  
+- Password: `password123`  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+After logging in, you’ll be redirected to the **Dashboard**.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🎨 Design Philosophy
+The design emphasizes **simplicity, clarity, and accessibility**:  
+- Minimalistic interface with **rounded cards and soft shadows**  
+- **Mobile-first, responsive design**  
+- Clean typography and intuitive navigation  
+- Engaging UI with project-based learning approach  
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠 Tech Stack
+- ⚡ Vite  
+- 🟦 TypeScript  
+- ⚛️ React  
+- 🎨 shadcn-ui  
+- 🌀 Tailwind CSS  
+- 📍 React Router  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🚀 Future Plans
+- Connect authentication and data storage with **Supabase**  
+- Add interactive coding playgrounds for Python & Web development  
+- Introduce gamification (badges, points, streaks)  
+- Enable user profiles with certificates and progress tracking  
+- Mobile offline access to notes and lessons  
 
-**Edit a file directly in GitHub**
+## 🤝 Contributing
+Contributions are welcome! 🎉  
+1. Fork the repository  
+2. Create a new branch (`feature/my-feature`)  
+3. Commit your changes (`git commit -m "Add my feature"`)  
+4. Push to the branch (`git push origin feature/my-feature`)  
+5. Open a Pull Request  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📧 Contact or Support
+For inquiries or support, contact:  
+**Email:** support@computercoursesmvp.com  
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ec47c396-3020-4c68-9fa2-4414b194fca8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📜 License
+This project is licensed under the MIT License.  
+See the LICENSE file for details.  
