@@ -42,15 +42,6 @@ export function Navigation() {
               <BookOpen className="h-4 w-4" />
               <span>Courses</span>
             </Link>
-            <Link
-              to="/dashboard"
-              className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary ${
-                isActive("/dashboard") ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              <User className="h-4 w-4" />
-              <span>Dashboard</span>
-            </Link>
           </nav>
 
           <div className="flex items-center space-x-2 sm:space-x-4">
@@ -105,16 +96,6 @@ export function Navigation() {
               >
                 <BookOpen className="h-4 w-4 flex-shrink-0" />
                 <span>Courses</span>
-              </Link>
-              <Link
-                to="/dashboard"
-                className={`flex items-center space-x-2 text-sm font-medium px-3 py-3 sm:py-2 rounded-lg transition-all duration-200 hover:bg-muted min-h-[44px] ${
-                  isActive("/dashboard") ? "text-primary bg-primary/10" : "text-muted-foreground"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <User className="h-4 w-4 flex-shrink-0" />
-                <span>Dashboard</span>
               </Link>
               
               {/* Mobile-only buttons */}
