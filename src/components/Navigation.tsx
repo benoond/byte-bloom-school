@@ -11,13 +11,13 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <BookOpen className="h-5 w-5 text-white" />
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex h-14 sm:h-16 items-center justify-between">
+          <Link to="/" className="flex items-center space-x-1.5 sm:space-x-2 min-w-0 flex-shrink-0">
+            <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
+              <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-lg sm:text-xl font-bold bg-gradient-primary bg-clip-text text-transparent truncate">
               ByteBloom
             </span>
           </Link>
@@ -53,11 +53,11 @@ export function Navigation() {
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="hidden sm:inline-flex">
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <Button variant="outline" size="sm" className="hidden lg:inline-flex text-xs sm:text-sm px-2 sm:px-3">
               Sign In
             </Button>
-            <Button size="sm" className="hidden sm:inline-flex bg-gradient-primary shadow-button hover:shadow-card-hover transition-all duration-300">
+            <Button size="sm" className="hidden lg:inline-flex bg-gradient-primary shadow-button hover:shadow-card-hover transition-all duration-300 text-xs sm:text-sm px-2 sm:px-3">
               Get Started
             </Button>
             
@@ -65,14 +65,14 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden p-2"
+              className="lg:hidden p-1.5 sm:p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
               )}
             </Button>
           </div>
@@ -80,45 +80,45 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t py-4 animate-fade-in">
-            <nav className="flex flex-col space-y-3">
+          <div className="lg:hidden border-t py-3 sm:py-4 animate-fade-in">
+            <nav className="flex flex-col space-y-2 sm:space-y-3">
               <Link
                 to="/"
-                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-3 sm:py-2 rounded-lg transition-all duration-200 hover:bg-muted min-h-[44px] ${
                   isActive("/") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <Home className="h-4 w-4" />
+                <Home className="h-4 w-4 flex-shrink-0" />
                 <span>Home</span>
               </Link>
               <Link
                 to="/courses"
-                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-3 sm:py-2 rounded-lg transition-all duration-200 hover:bg-muted min-h-[44px] ${
                   isActive("/courses") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <BookOpen className="h-4 w-4" />
+                <BookOpen className="h-4 w-4 flex-shrink-0" />
                 <span>Courses</span>
               </Link>
               <Link
                 to="/dashboard"
-                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 hover:bg-muted ${
+                className={`flex items-center space-x-2 text-sm font-medium px-3 py-3 sm:py-2 rounded-lg transition-all duration-200 hover:bg-muted min-h-[44px] ${
                   isActive("/dashboard") ? "text-primary bg-primary/10" : "text-muted-foreground"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <User className="h-4 w-4" />
+                <User className="h-4 w-4 flex-shrink-0" />
                 <span>Dashboard</span>
               </Link>
               
               {/* Mobile-only buttons */}
-              <div className="pt-3 border-t space-y-2">
-                <Button variant="outline" size="sm" className="w-full justify-start">
+              <div className="pt-2 sm:pt-3 border-t space-y-2">
+                <Button variant="outline" size="sm" className="w-full justify-start min-h-[44px] text-sm">
                   Sign In
                 </Button>
-                <Button size="sm" className="w-full bg-gradient-primary shadow-button">
+                <Button size="sm" className="w-full bg-gradient-primary shadow-button min-h-[44px] text-sm">
                   Get Started
                 </Button>
               </div>
