@@ -45,11 +45,13 @@ export function Navigation() {
           </nav>
 
           <div className="flex items-center space-x-2 sm:space-x-4">
-            <Link to="/login">
-              <Button variant="outline" size="sm" className="hidden lg:inline-flex text-xs sm:text-sm px-2 sm:px-3">
-                Sign In
-              </Button>
-            </Link>
+            {!isActive("/dashboard") && (
+              <Link to="/login">
+                <Button variant="outline" size="sm" className="hidden lg:inline-flex text-xs sm:text-sm px-2 sm:px-3">
+                  Sign In
+                </Button>
+              </Link>
+            )}
             <Link to="/login">
               <Button size="sm" className="hidden lg:inline-flex bg-gradient-primary shadow-button hover:shadow-card-hover transition-all duration-300 text-xs sm:text-sm px-2 sm:px-3">
                 Dashboard
@@ -100,11 +102,13 @@ export function Navigation() {
               
               {/* Mobile-only buttons */}
               <div className="pt-2 sm:pt-3 border-t space-y-2">
-                <Link to="/login" className="w-full" onClick={() => setMobileMenuOpen(false)}>
-                  <Button variant="outline" size="sm" className="w-full justify-start min-h-[44px] text-sm">
-                    Sign In
-                  </Button>
-                </Link>
+                {!isActive("/dashboard") && (
+                  <Link to="/login" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                    <Button variant="outline" size="sm" className="w-full justify-start min-h-[44px] text-sm">
+                      Sign In
+                    </Button>
+                  </Link>
+                )}
                 <Link to="/login" className="w-full" onClick={() => setMobileMenuOpen(false)}>
                   <Button size="sm" className="w-full bg-gradient-primary shadow-button min-h-[44px] text-sm">
                     Dashboard
